@@ -4,10 +4,10 @@ from selene import browser
 import config
 
 
-def bstack_video(session_id):
+def bstack_video(session_id, url):
 
     bstack_session = requests.get(
-        f'https://api.browserstack.com/app-automate/sessions/{session_id}.json',
+        f'{url}{session_id}.json',
         auth=(config.USER_APP, config.PASSWORD_APP),
     ).json()
     print(bstack_session)

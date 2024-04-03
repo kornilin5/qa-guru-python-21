@@ -4,7 +4,7 @@ import allure_commons
 from appium.options.android import UiAutomator2Options
 from selene import browser, support
 import os
-import config
+from config import USER_APP, PASSWORD_APP, BROWSER_STACK_URL
 from qa_guru_python_21.utils import attach_allure
 from appium import webdriver
 
@@ -27,8 +27,8 @@ def mobile_management():
             'sessionName': 'BStack first_test',
 
             # Set your access credentials
-            'userName': config.USER_APP,
-            'accessKey': config.PASSWORD_APP,
+            'userName': USER_APP,
+            'accessKey': PASSWORD_APP,
         }
     })
 
@@ -47,4 +47,4 @@ def mobile_management():
 
     with allure.step('tear down app session'):
         browser.quit()
-    attach_allure.bstack_video(session_id)
+    attach_allure.bstack_video(session_id, BROWSER_STACK_URL)
