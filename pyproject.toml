@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "qa-guru-python-21"
+version = "0.1.0"
+description = ""
+authors = ["Kornilin5 <sasha_kornilin@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.1.1"
+selene = "2.0.0rc9"
+pytest-dotenv = "^0.5.2"
+allure-pytest = "^2.13.5"
+appium-python-client = "^4.0.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
